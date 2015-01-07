@@ -1,0 +1,55 @@
+mysterySort1 is Bubble Sort 
+Your evidence:
+
+	I realized that calling mysterySort1(a, 1) will go through each number once.  Doing this 6 times leads to this outcome:
+
+6 5 3 1 8 7 2 4 
+5 3 1 6 7 2 4 8 
+3 1 5 6 2 4 7 8 
+1 3 5 2 4 6 7 8 
+1 3 2 4 5 6 7 8 
+1 2 3 4 5 6 7 8 <-- Sorting complete
+
+Drawing out each step of the bubble sort will show that the output matches.
+
+
+mysterySort2 is Heap Sort
+Your evidence: 
+
+	Similarly to before, I called mysterySort2(a, 1) to look through each process.  There was a lot of jumbling up and switching back and forth between numbers.  This behavior is common when doing a heap sort.  I also analyzed each change step-by-step and everything matched up to a heap sort accordingly.
+
+
+mysterySort3 is Insertion Sort
+Your evidence: 
+
+	Similarly to before, I called mysterySort3(a, 1) to look through each process.  There wasn't a change every time, but looking at each change eventually resulted in this:
+
+6 5 3 1 8 7 2 4
+3 5 6 1 8 7 2 4
+1 3 5 6 8 7 2 4
+1 2 3 5 6 7 8 4
+1 2 3 4 5 6 7 8
+
+Draw out each step of the insertion sort and it's the same pattern.
+
+
+mysterySort4 is Quicksort
+Your evidence: 
+
+	I took the same approach as the other times calling the function mysterySort4(a, 1) and every step seemed to match up with a quick sort.  Also, to be honest, I did this one last and process of elimination helped me solve this originally.
+
+
+mysterySort5 is Selection Sort
+Your evidence: 
+
+	Similarly to before, I called mysterySort5(a, 1) to look through each process.  There wasn't a change every time, but looking at each change eventually resulted in this:
+
+6 5 3 1 8 7 2 4
+1 6 5 3 8 7 2 4
+1 2 6 5 3 8 7 4
+1 2 3 6 5 8 7 4
+1 2 3 4 6 5 8 7
+1 2 3 4 5 6 8 7
+1 2 3 4 5 6 7 8
+
+Which is each step of the selection sort process

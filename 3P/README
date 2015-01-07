@@ -1,0 +1,14 @@
+CS515 Assignment 3
+
+Name: <Joseph Bennett>
+uid: <jbq263>
+Section: 3
+
+How many hours did you take to complete this assignment?
+7
+
+How difficult did you find this assignment from a scale of 0-10 where 10 represents the hardest?
+6
+
+What challenges did you encounter? And how did you address them?
+I finished the whole problem without reading the "3D Array" part.  I interpreted the text literally and tried to somehow make a 3D array of filestreams.  But then I went on Piazza and realized that it was supposed to mean a 3D dynamic array of integer values despite what the text actually technically said.  I made my integer values 2D: [Height*Width][file].  It was a sad waste of time.  So then I tried to configure the 3D array as: [file][height][width].  Then I tried to implement the "sort" function with it but eventually realized that it needed to be [height][width][file].  Then everything worked fine.

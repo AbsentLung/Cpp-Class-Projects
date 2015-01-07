@@ -1,0 +1,94 @@
+/** CS515 Assignment 2
+ * File: crypto.cpp
+ * Name: Joseph Bennett
+ * Section: 3
+ * Date: 9/15/13
+ * Collaboration Declaration: No assistance recieved
+ * */ 
+//This program takes all of the characters in an input file and converts
+//it to a different set of encrypted characters in an output file.  A
+//password is then used to decrypt the characters.
+#include <iostream>
+#include <fstream>
+//#include <stdio.h>
+//#include <ctype.h>
+#include <string>
+using namespace std;
+
+void errFound(ifstream file1, ofstream file2, string errMsg){
+	cout<<errMsg<<endl;
+	file1.close();
+	file2.close();
+}
+
+int main (int argc, char *argv[]) {
+	string line;
+	string encDec = argv[1];
+	string code = argv[2];
+	ifstream myInputFile (argv[3]);
+	ofstream myOutputFile (argv[4]);
+	int i;
+	int codeInt[code.length()];
+	int j = 0;
+	int ASCIICode;
+	bool notLowerCase = true;
+	while (code[i]){
+		if (code[i] < 97 || code[i] > 122)
+			notLowerCase = false;
+		codeInt[i] = code[i] - 97;
+		i++;
+	}
+	if (argc != 5)
+		errFound(myInputFile, myOutputFile, "wrong number of arguments");
+	else if (encDec != "e" && encDec != "d")
+		errFound(myInputFile, myOutputFile, "must enter e for encryption or d for decryption");
+	else if (code.length() >= 11 || notLowerCase == false)
+		errFound(myInputFile, myOutputFile, "key must have less than 10 all lower case letters");
+	else if (!myInputFile.is_open())
+		errFound(myInputFile, myOutputFile, "can not open " << argv[3] << " for input");
+	else {
+		while ( getline (myInputFile,line) ) {
+			i = 0;
+			while (line[i])
+			{
+				if (line[i] <= 122 && line[i] >= 97)
+				{
+					if (encDec == "e")
+					{
+						ASCIICode = codeInt[j] + line[i];
+						while (ASCIICode > 122)
+							ASCIICode -= 26;
+						line[i] = ASCIICode;
+					}
+					else
+					{
+						ASCIICode = line[i] - codeInt[j];
+						while (ASCIICode < 97)
+							ASCIICode += 26;
+						line[i] = ASCIICode;
+					}
+					if (j < code.length())
+						j++;
+					else
+						j = 0;
+				}
+				if (line[i] <= 90 && line[i] >= 65)
+				{
+					ASCIICode = codeInt[j] + line[i];
+					while (ASCIICode > 90)
+						ASCIICode -= 26;
+					line[i] = ASCIICode + 32;
+					if (j < code.length())
+						j++;
+					else
+						j = 0;
+				}
+				i++;
+			}
+			myOutputFile << line << endl;
+		}
+		myInputFile.close();
+		myOutputFile.close();
+	}
+	return 0;
+}

@@ -1,0 +1,10 @@
+#!/bin/tcsh -f
+
+echo "+++++++all pair path 0++++++++" 
+./shortestPath < data0
+
+echo "+++++++all pair path 1++++++++" 
+./shortestPath < data1
+
+echo "+++++++all pair path 2++++++++" 
+./shortestPath < data2

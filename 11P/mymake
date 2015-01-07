@@ -1,0 +1,3 @@
+mynetwork:
+	g++ -c DisjointSet.h kruskal.h
+	g++ main.cpp -o mynetwork

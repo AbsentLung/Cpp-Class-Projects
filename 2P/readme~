@@ -1,0 +1,9 @@
+After compiling enter 5 arguments:
+1) ./crypto
+2) "e" for encode or "d" for decode
+3) your password
+4) input file
+5) output file
+
+For example: "./crypto e passw in out" will create an output file encoded with passowrd "passw"
+and "./crypto d passw out newin" will decode the output file and create a lowercase duplicate of "in" with file name "newin"

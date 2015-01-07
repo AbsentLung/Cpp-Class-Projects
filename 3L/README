@@ -1,0 +1,15 @@
+CS515 Assignment 3
+
+Name: <Joseph Bennett>
+uid: <jbq263>
+Section: 3
+
+How many hours did you take to complete this assignment?
+5
+
+How difficult did you find this assignment from a scale of 0-10 where 10 represents the hardest?
+5
+
+What challenges did you encounter? And how did you address them?
+I couldn't remember how to declare a pointer array dynamically and how to delete it afterwards so I referred to the notes.
+I realized that deleting a pointer doesn't get rid of it though deleting its array does

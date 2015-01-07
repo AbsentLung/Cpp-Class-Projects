@@ -1,0 +1,3 @@
+Are we assuming that the program is only reading in integers past the first line?
+Should we have an error message set up for too little arguments in imagestack.cpp?
+Should we check that all images are the same size in imagestack.cpp?

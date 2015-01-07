@@ -1,0 +1,8 @@
+In this project I used Kruskal's Algorithm to find a minimum spanding tree given a data file that shows the distance between points.
+
+In order to run, compile by typing "./mynetwork [data file]".
+
+There are three commands, "ping", "ssh", and "exit".
+ping - shows the shortest path from current point to specified point
+ssh - changes current location and puts new location on top of stack
+exit - pops current location off of the stack and leaving previous location at the top of the stack

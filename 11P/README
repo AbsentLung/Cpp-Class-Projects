@@ -1,0 +1,14 @@
+CS515 Assignment 11
+
+Name: Joseph Bennett
+uid: jbq263
+Section: 3
+
+How many hours did you take to complete this assignment?
+7
+
+How difficult did you find this assignment from a scale of 0-10 where 10 represents the hardest?
+8
+
+What challenges did you encounter? And how did you address them?
+It was difficult trying to figure out exactly what files I needed since we were given the option to be creative.  Eventually I just chose to implement a main file, a .cpp and .h file for kruskal's algorithm, and the Disjoint Set from the lab
